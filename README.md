@@ -1,4 +1,7 @@
 # farm-plugin-html-template
+<a href="https://www.npmjs.com/package/@jstors/farm-plugin-html-template">![NPM Version](https://img.shields.io/npm/v/%40jstors%2Ffarm-plugin-html-template)</a>
+
+
 
 This plugin is used to dynamically replace variables like `${var}$` injected into HTML.
 
