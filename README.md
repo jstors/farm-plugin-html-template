@@ -1,6 +1,6 @@
 # farm-plugin-html-template
 
-This plugin is used to dynamically replace variables injected into HTML.
+This plugin is used to dynamically replace variables like `${var}$` injected into HTML.
 
 ## Installation
 
@@ -14,6 +14,11 @@ pnpm install @jstors/farm-plugin-html-template
 ## Usage
 
 ### Configuration
+
+Note that if you want to replace the variables correctly, you must define them correctly inside the configured `data`.
+
+If there is no match in the `data` field for the variable you defined, then it won't be replaced.
+
 ```javascript
 import farmPluginHtmlTemplate from '@jstors/arm-plugin-html-template';
 import { defineConfig } from "@farmfe/core";
@@ -23,7 +28,7 @@ export default defineConfig({
   plugins: [
     ["@jstors/farm-plugin-html-template",
      {
-      template: 'src/index.html',
+      template: path.resolve(__dirname, 'index.html'),
       data: {
         title: 'Hello World',
         description: 'This is a description',
@@ -34,9 +39,20 @@ export default defineConfig({
 });
 ```
 ### HTML Template
+
+- `pre-conversion`
 ```html
 <!-- .... -->
 <title>${title}$</title>
+<meta name="description" content="${description}$">
+<link rel="stylesheet" href="${css_link}$">
+<!-- ... -->
+```
+- `converted`
+
+```html
+<!-- .... -->
+<title>Hello World</title>
 <meta name="description" content="${description}$">
 <link rel="stylesheet" href="${css_link}$">
 <!-- ... -->
