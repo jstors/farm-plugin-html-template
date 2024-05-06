@@ -8,11 +8,11 @@ This plugin is used to dynamically replace variables like `${var}$` injected int
 ## Installation
 
 ```bash
-npm install @jstors/farm-plugin-html-template
+npm install -D @jstors/farm-plugin-html-template 
 # or
-yarn add @jstors/farm-plugin-html-template
+yarn add  -D @jstors/farm-plugin-html-template
 #or 
-pnpm install @jstors/farm-plugin-html-template
+pnpm install -D @jstors/farm-plugin-html-template
 ```
 ## Usage
 
