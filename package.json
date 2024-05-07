@@ -1,7 +1,7 @@
 {
   "name": "@jstors/farm-plugin-html-template",
   "description": "This plugin is used to dynamically replace variables injected into HTML.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "scripts/index.js",
   "types": "scripts/index.d.ts",
   "type": "module",
@@ -28,6 +28,7 @@
       "require": "./scripts/index.js",
       "types": "./scripts/index.d.ts"
     },
+    "./func":"./scripts/func.js",
     "./package.json": "./package.json"
   },
   "scripts": {

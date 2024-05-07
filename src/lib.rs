@@ -42,12 +42,10 @@ impl Plugin for FarmPluginHtmlTemplate {
   fn transform(
     &self,
     param: &farmfe_core::plugin::PluginTransformHookParam,
-    context: &std::sync::Arc<farmfe_core::context::CompilationContext>,
+    _context: &std::sync::Arc<farmfe_core::context::CompilationContext>,
   ) -> farmfe_core::error::Result<Option<farmfe_core::plugin::PluginTransformHookResult>> {
     // only handle html file
     if ModuleType::Html == param.module_type && self.options.template == param.resolved_path {
-      println!("{:?}", param.resolved_path);
-
       let content = param.content.clone();
       let mut result = String::new();
       for capture in self.re.captures_iter(&content) {
