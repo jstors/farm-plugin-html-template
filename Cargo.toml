@@ -11,3 +11,10 @@ farmfe_core = { version = "*" }
 farmfe_toolkit_plugin_types = { version = "*" }
 farmfe_macro_plugin = { version = "*" }
 serde = { version = "1.0", features = ["derive"] }
+select={version = "*"}
+
+
+[dev-dependencies]
+farmfe_testing_helpers = {version = "*"}
+farmfe_compiler = { version = "*"}
+farmfe_toolkit={version = "*"}
